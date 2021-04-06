@@ -4,6 +4,13 @@ import tkinter.ttk as ttk
 root=Tk()
 root.title('project')
 
+#시작
+def start():
+    print('가로넓이:', cmb_width.get())
+    #get함수를 통해 어떤 것이 선택되어있는지 가져오기
+    print('간격:', cmb_space.get())
+    print('포멧:', cmb_format.get())
+
 #레이아웃을 잡을때는 프레임 단위로 관리하는 것이 편함
 #파일 프레임
 file_frame=Frame(root)
@@ -75,7 +82,7 @@ btn_close=Button(frame_run, padx=5, pady=5, width=12, text='닫기', command=roo
 #root.quit는 종료하는 내부 함수
 btn_close.pack(side='right', padx=5, pady=5)
 
-btn_start=Button(frame_run, padx=5, pady=5, width=12, text='시작')
+btn_start=Button(frame_run, padx=5, pady=5, width=12, text='시작', command=start)
 btn_start.pack(side='right', padx=5, pady=5)
 
 root.resizable(False,False)
